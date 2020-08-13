@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+:root{
+    --main-font-family: 'Source Sans Pro', sans-serif;
+    --nav-color-bg:rgba(51,51,51,0.8);
+
+    /* navcolor */
+    --nav-color: rgb(158, 157, 157) ;
+    --hover-nav-color: #fff;
+    --nav-height: 6vh ;
+
+    --nav-corona-bg:rgb(0,113,227);
+    --nav-shop-bg:rgb(255,255,255);
+
+    --info-title: rgb(131, 131, 131);
+
+}
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+html{
+    font-size: 62.5%;
+    font-family: var(--main-font-family);
+    font-weight: lighter;
+}
+
+body{
+    font-family: var(--main-font-family) ;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding:0;
+    font-weight: normal;
+} 
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.large-title{
+    font-size: 4rem;
+    letter-spacing: -1px;
+    margin-bottom: 3px;
+}
+
+.second-title{
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+}
+
+.info-title{
+    letter-spacing: -1px;
+    font-size: 1.5rem;
+    margin-top: 3px;
+}
+
+.container a{
+    color: var(--nav-corona-bg)
+}
+
+.container a:hover{
+    text-decoration: underline;
+}
+.small-arrow{
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+.arrow-light{
+    color: #fff;
+}
+
+.arrow-blue{
+    color: var(--nav-corona-bg);
+}
+/* header */
+/* nav */
+
+.nav-bar{
+    height: var(--nav-height);
+    background: var(--nav-color-bg);
+    position: sticky;
+    z-index: 2;
+    top: 0;
+}
+
+.nav-bar ul{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar ul li{
+    margin: 0 3vh;
+}
+
+.nav-bar ul li a{
+    color: var(--nav-color);
+    font-size: 1.2rem;
+}
+
+.nav-bar ul li a:hover{
+    color: var(--hover-nav-color);
+}
+
+.nav-corona-info ,.nav-shop{
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav-corona-info{
+    background-color: var(--nav-corona-bg);
+}
+
+.nav-corona-info a{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.nav-corona-info a:hover, .nav-shop a:hover{
+    text-decoration: underline;
+}
+
+.nav-shop{
+    height: var(--nav-height);
+}
+
+.nav-shop a, .nav-shop p{
+    font-size: 1.2rem;
+}
+
+/* page one */
+.page-one, .page-two, .page-tree{
+    height: 80vh;
+}
+
+.page-one__img{
+    height: 100%;
+    background: url(/img/page-1-pic.jpg) no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.page-one__img h1{
+    color: #fff;
+}
+
+.page-one__img h3{
+    color: #fff;
+}
+
+.page-one__img h4{
+    color: gray;
+}
+
+.page-one__img .page-one__links, .page-two__info .page-two__links{
+    margin-top: 7px;
+    display: flex;
+    flex-direction: row;
+}
+
+.page-one__img .page-one__links a, .page-two__info .page-two__links a{
+    font-weight: bolder;
+    padding: 0px 0px 0px 20px; 
+}
+
+/* page 2 */
+
+.page-two::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: gray;
+    z-index: 7;
+}
+
+.page-two__info{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-two__info .info-title{
+    color: var(--info-title);
+}
+
+.page-two__img{
+    height: 65%;
+}
+
+.page-two__img img{
+    height: 100%;
+    width: 100%;
+    object-fit: top center/cover;
+}
+
+/*  page 3 */
+
+.page-tree{
+    background-color: RGB(239, 239, 239);
+}
+.page-tree__img{
+    height: 100%;
+    width: 100%;
+    background: url(/img/page-3.jpg)no-repeat center center/contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-tree__img .tv{
+    margin-bottom: 5vh;
+    width: 90px;
+}
+
+.page-tree__img .signture{
+    margin-top: 35vh;
+    margin-left: 20px;
+    width: 100px;
+}
+
+.page-tree__links{
+    margin-top: 10px;
+}
+
+/* cards */
+.card{
+    width: 100%;
+    height: 100%;
+
+}
+.half-pages-container{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    flex: 50%;
+}
+
+.card-2{
+    background-color: brown;
+}
+
+.card-1 img{
+   height: 50%;
+   width: 100%;
+   object-fit: cover;
+}
+
+.card-2 img{
+    width: 100%;
+
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
